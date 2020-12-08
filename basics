@@ -1,0 +1,30 @@
+#!/bin/bash
+OSM=$(cat /etc/*release | grep -o Ubuntu | head -1)
+
+if [ "$(id -u)" != "0" ]; then
+    echo "You must be root!"
+    exit
+fi
+
+hack () { #Install hacking tools
+    echo -e "Hacking tools?"
+    read a
+
+    if [[ $a == [yY] ]]; then
+	apt install nmap -y
+	mv -vf pport /usr/bin
+    else
+	echo "Everything is installed!"
+    fi
+}
+
+if [[ $OSM == "Ubuntu" ]]; then ##Check if it's ubuntu or it's centos
+    apt install emacs git python3 -y
+    hack
+else
+    yum install emacs git python3 -y
+    hack
+fi
+
+chmod +x sgit
+mv -f sgit /usr/bin
