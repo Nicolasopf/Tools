@@ -1,0 +1,5 @@
+#!/bin/bash
+
+OUTPUT=$(cat $1 | tr "a" "\t")
+rm $1
+echo "$OUTPUT" > $1
