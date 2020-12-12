@@ -1,11 +1,9 @@
 #!/bin/bash
 
-if [[ $1 == *.py ]]
-then
+if [[ $1 == *.py ]]; then
     chmod +x $1
     c=$(pep8 $1 | wc -l)
-    if [ $c >= "1" ]
-    then
+    if [ $c >= "1" ]; then
 	pep8 $1
 	exit
     fi
