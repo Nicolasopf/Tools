@@ -41,9 +41,6 @@ hack () { #Install hacking tools
     fi
 }
 
-#        Check if is:
-#          Ubuntu
-#          Centos
 
 
 ####################################################
