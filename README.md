@@ -8,7 +8,7 @@
 
 
 
-## Commands and other Interesting stuff
+# Commands and other Interesting stuff
 ## Command to reduce the resolution of a video
 This keeps the aspect radio and the quality while reducing the resolution.
 
