@@ -1,10 +1,33 @@
 #!/bin/bash
-OSM=$(cat /etc/*release | grep -o Ubuntu | head -1)
+OSM=$(cat /etc/*release | grep -o Ubuntu | head -1) # Check for ubuntu distrib
+Bapa="emacs git python3 -y"
 
-if [ "$(id -u)" != "0" ]; then
+if [ "$(id -u)" != "0" ]; then # Check for root
     echo "You must be root!"
     exit
 fi
+
+#        Additional functions (No packages):
+#        [+] config: emacs file, .bashrc file
+#        [+] hack: Install nmap, nmap script auto.
+
+config () { # Ask for installing configuration files
+    echo "Install config?"
+    read E
+
+    if [[ $E == [yY] ]]; then # Move configuration to respective directories.
+	mv .emacs ~/
+	if [[ $(grep '\\w\\a' ~/.bashrc | wc -l) == "1" ]]; then
+	    bashrc=$(cat ~/.bashrc | sed '\\w\\a/\\W\\a')
+	    rm ~/.bashrc
+	    echo -e "$bashrc" > ~/.bashrc
+	    source ~/.bashrc
+	    echo "ASD"
+	else
+	    "Done"
+	fi
+    fi
+    }
 
 hack () { #Install hacking tools
     echo -e "Hacking tools?"
@@ -18,12 +41,24 @@ hack () { #Install hacking tools
     fi
 }
 
+#        Check if is:
+#          Ubuntu
+#          Centos
+
+
+####################################################
+################ INSTALLATION START ################
+####################################################
+
+
+
 if [[ $OSM == "Ubuntu" ]]; then ##Check if it's ubuntu or it's centos
-    apt install emacs git python3 -y
+    apt install $Bapa
     hack
+    config
 else
-    yum install emacs git python3 -y
-    hack
+    yum install $Bapa
+    config
 fi
 
 chmod +x sgit
