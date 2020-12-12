@@ -1,8 +1,31 @@
-# Tools for a new machine:
+<h1 align="center">Welcome to Tools 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.6-blue.svg?cacheSeconds=2592000" />
+  <a href="https://twitter.com/Nicolas\_opf" target="_blank">
+    <img alt="Twitter: Nicolas\_opf" src="https://img.shields.io/twitter/follow/Nicolas\_opf.svg?style=social" />
+  </a>
+</p>
 
-## Command to reduce the resolution of a video
-This keeps the aspect radio and the quality while reducing the resolution.
+> Useful tools for ubuntu and debian distrrib
 
+## Install
+
+```sh
+./basics
 ```
-ffmpeg -i 1205201058.mp4 -vf scale=1280:-1 -crf 30 -preset veryslow smaller.mp4
-```
+
+## Author
+
+👤 **Nicolas Felipe**
+
+* Website: https://auditoriaplus.com/
+* Twitter: [@Nicolas\_opf](https://twitter.com/Nicolas\_opf)
+* Github: [@Nicolasopf](https://github.com/Nicolasopf)
+* LinkedIn: [@Nicolasopf](https://linkedin.com/in/Nicolasopf)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
