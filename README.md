@@ -1,5 +1,14 @@
-# Tools for a new machine:
+# Tools for a new machine.
 
+
+
+
+
+
+
+
+
+## Commands and other Interesting stuff
 ## Command to reduce the resolution of a video
 This keeps the aspect radio and the quality while reducing the resolution.
 
