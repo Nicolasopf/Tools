@@ -1,5 +1,5 @@
 #!/bin/bash
-OSM=$(cat /etc/*release | grep -o Ubuntu | head -1) # Check for ubuntu distrib
+OSM=$(cat /etc/*release | grep -o Ubuntu | wc -l) # Check for ubuntu distrib, If not, suppose Centos like.
 Bapa="emacs git python3 -y"
 
 if [ "$(id -u)" != "0" ]; then # Check for root
@@ -18,11 +18,10 @@ config () { # Ask for installing configuration files
     if [[ $E == [yY] ]]; then # Move configuration to respective directories.
 	mv .emacs ~/
 	if [[ $(grep '\\w\\a' ~/.bashrc | wc -l) == "1" ]]; then
-	    bashrc=$(cat ~/.bashrc | sed '\\w\\a/\\W\\a')
+	    bashrc=$(cat ~/.bashrc | sed '\\w\\a/\\W\\a') # Next version will add a better PS1!
 	    rm ~/.bashrc
 	    echo -e "$bashrc" > ~/.bashrc
 	    source ~/.bashrc
-	    echo "ASD"
 	else
 	    "Done"
 	fi
@@ -33,12 +32,21 @@ hack () { #Install hacking tools
     echo -e "Hacking tools?"
     read a
 
-    if [[ $a == [yY] ]]; then
-	apt install nmap -y
-	mv -vf pport /usr/bin
+    if [[ $OSM == "Ubuntu" ]]; then
+	if [[ $a == [yY] ]]; then
+	    apt install nmap -y
+	    mv -vf pport /usr/bin
+	else
+	    echo "Everything is installed!"
+	fi
     else
-	echo "Everything is installed!"
+	if [[ $a == [yY] ]]; then
+	    yum install nmap -y
+	else
+	    echo "Everything is installed!"
+	fi
     fi
+mv -vf pport /usr/bin/
 }
 
 
