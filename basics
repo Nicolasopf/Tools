@@ -12,7 +12,7 @@ fi
 #        [+] hack: Install nmap, nmap script auto.
 
 config () { # Ask for installing configuration files
-    echo "Install config?"
+    echo "Install config? WARNING: .bashrc and .emacs will be replaced"
     read E
 
     if [[ $E == [yY] ]]; then # Move configuration to respective directories.
