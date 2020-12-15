@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to Tools 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.6-blue.svg?cacheSeconds=2592000" />
-  <a href="https://twitter.com/Nicolas\_opf" target="_blank">
-    <img alt="Twitter: Nicolas\_opf" src="https://img.shields.io/twitter/follow/Nicolas\_opf.svg?style=social" />
+  <a href="https://twitter.com/Nicolas_opf" target="_blank">
+    <img alt="Twitter: Nicolas\_opf" src="https://img.shields.io/twitter/follow/Nicolas_opf.svg?style=social" />
   </a>
 </p>
 
@@ -27,5 +27,3 @@
 
 Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
