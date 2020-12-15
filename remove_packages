@@ -11,9 +11,7 @@ echo -e "
 "
 
 if [[ -z $1 ]]; then
-   {
        echo "You need to put an argument!"
-   }
 fi
 
 sudo apt remove $1 -y
