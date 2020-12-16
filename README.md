@@ -34,7 +34,7 @@ The .bashrc will check if You have \W\ activated in PS1 (means if You have enabl
 
 If You select "Y" when asks for Hack tools, the following things will be installed:
 
-* pport: Automatic nmap scan with output to a filem, make a faster scan by doing "pport f IP_TARGET" (Read the pport file for more info)
+* pport: Automatic nmap scan with output to a file, make a faster scan by doing "pport f IP_TARGET" (Read the pport file for more info)
 * Nmap package
 
 
