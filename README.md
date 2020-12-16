@@ -27,7 +27,7 @@ If You select "Y" when asks for config, the following config will be installed:
 * .bashrc to your home directory
 
 The .emacs will configure your emacs to show colors like this:
-https://user-images.githubusercontent.com/69660332/102292174-a5e2d680-3f12-11eb-8993-84bae67f2d9f.png
+![alt text](https://user-images.githubusercontent.com/69660332/102292174-a5e2d680-3f12-11eb-8993-84bae67f2d9f.png)
 
 The .bashrc will check if You have \W\ activated in PS1 (means if You have enabled show all parent directories or just the current.)
 
