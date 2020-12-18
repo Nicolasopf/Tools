@@ -35,7 +35,6 @@ hack () { #Install hacking tools
     if [[ $OSM == "Ubuntu" ]]; then
 	if [[ $a == [yY] ]]; then
 	    apt install nmap -y
-	    mv -vf pport /usr/bin
 	else
 	    echo "Everything is installed!"
 	fi
