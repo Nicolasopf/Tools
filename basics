@@ -35,7 +35,6 @@ hack () { #Install hacking tools
     if [[ $OSM == "Ubuntu" ]]; then
 	if [[ $a == [yY] ]]; then
 	    apt install nmap -y
-	    mv -vf pport /usr/bin
 	else
 	    echo "Everything is installed!"
 	fi
@@ -46,7 +45,7 @@ hack () { #Install hacking tools
 	    echo "Everything is installed!"
 	fi
     fi
-mv -vf pport /usr/bin/
+mv -vf pport ~/bin
 }
 
 
@@ -56,7 +55,7 @@ mv -vf pport /usr/bin/
 ####################################################
 
 
-
+mkdir ~/bin
 if [[ $OSM == "Ubuntu" ]]; then ##Check if it's ubuntu or it's centos
     apt install $Bapa
     hack
@@ -67,4 +66,5 @@ else
 fi
 
 chmod +x sgit
-mv -f sgit /usr/bin
+mv -vf sgit ~/bin
+source ~/.profile
