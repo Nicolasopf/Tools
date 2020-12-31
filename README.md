@@ -40,7 +40,9 @@ If You select "Y" when asks for Hack tools, the following things will be install
 
 Other features such as remove_packages can be utils in specific cases so will not be installed if You don't move it.
 
-In the next version I will create a menu to select which tools do You want to install.
+## Interesting tools:
+GHunt, OSINT tool for google accounts - https://github.com/mxrch/GHunt
+Sherlock, Check for username existence in many social networks - https://github.com/sherlock-project/sherlock
 
 ## Author
 
