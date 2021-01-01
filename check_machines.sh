@@ -11,12 +11,12 @@ if [[ $initial != $1 ]]; then
 fi
 initial=$(echo $initial | cut -d "." -f1-3)
 for last in $(seq 1 255); do
-    if timeout 1 bash -c "ping -c 1 $initial.$last > /dev/null 2>&1"; then
-	ttl=$(timeout 1 bash -c "ping -c 1 $initial.$last | grep -oP '(?<=ttl=).*(?= t)'")
-	echo -n "OPEN: $initial.$last "
-	if (( $ttl >= 60 && $ttl <= 66 )); then
-	    echo "Linux based"
-	elif (( $ttl >= 124 && $ttl <= 132 )); then
+    test=$(timeout 1 bash -c "ping -c 1 $initial.$last" | grep -oP "(?<=ttl=).*(?= t)" &)
+    if [[ test -ge 1 ]]; then
+	echo -n "ACTIVE: $initial.$last "
+	if (( $test >= 60 && $test <= 66 )); then
+	    echo "Linux based (If local network, may android)"
+	elif (( $test >= 124 && $test <= 132 )); then
 	    echo "Windows"
 	else
 	    echo "Unknown TTL: $ttl"
